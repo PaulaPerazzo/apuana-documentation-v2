@@ -1,16 +1,157 @@
-# React + Vite
+# Apuana Documentation v2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive documentation website for the Apuana Cluster at CIn-UFPE (Centro de Informática da Universidade Federal de Pernambuco). This project provides comprehensive documentation for cluster users, including theory, usage guides, and best practices.
 
-Currently, two official plugins are available:
+## 📋 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Apuana Documentation v2 is a web-based documentation platform that helps users understand and effectively utilize the Apuana computing cluster. The documentation covers:
 
-## React Compiler
+- **Cluster Overview**: Architecture and hardware specifications
+- **Theory**: Introduction to high-performance computing concepts, Unix/Linux basics, batch systems, and data management
+- **User Guides**: Practical guides for running jobs, using Python, Singularity containers, multi-node computing, data sharing, and portability
+- **Services**: Available cluster services and resources
+- **Dashboard**: Monitoring and management tools
+- **FAQ**: Frequently asked questions and troubleshooting
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🌓 **Dark/Light Mode**: Built-in theme switcher for user preference
+- 📱 **Responsive Design**: Mobile-friendly interface using Tailwind CSS
+- 🧭 **Easy Navigation**: Intuitive routing with React Router
+- 🎨 **Modern UI**: Clean and professional design with Lucide icons
+- 💻 **Code Highlighting**: Syntax highlighting for code examples using react-syntax-highlighter
+- ⚡ **Fast Performance**: Built with Vite for optimal loading speeds
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **React 19.2.0**: Modern UI library
+- **Vite 7.2.4**: Next-generation frontend tooling
+- **React Router DOM 7.12.0**: Client-side routing
+- **Tailwind CSS 4.1.18**: Utility-first CSS framework
+- **Lucide React**: Beautiful icon library
+- **React Syntax Highlighter**: Code syntax highlighting
+- **ESLint**: Code linting and quality assurance
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- **Node.js** (LTS version recommended): [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) or **yarn**
+
+## 🚀 Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/PaulaPerazzo/apuana-documentation-v2.git
+   cd apuana-documentation-v2
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+## 🏃 How to Run
+
+### Development Mode
+
+To start the development server with hot module replacement (HMR):
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173/` (or another port if 5173 is busy). The terminal will display the exact URL.
+
+### Production Build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+This will generate a `dist` folder with optimized static files ready for deployment.
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Linting
+
+To run ESLint and check code quality:
+
+```bash
+npm run lint
+```
+
+## 📁 Project Structure
+
+```
+apuana-documentation-v2/
+├── public/               # Static assets
+│   ├── assets/          # Images and other static files
+│   └── cin_favicon.svg  # CIn favicon
+├── src/
+│   ├── assets/          # Application assets
+│   ├── components/      # Reusable React components
+│   │   ├── Layout.jsx   # Main layout wrapper
+│   │   └── ui/          # UI components (Alert, etc.)
+│   ├── context/         # React context providers
+│   │   └── ThemeContext.jsx  # Theme management
+│   ├── data/            # Static data and configurations
+│   │   └── navigation.jsx    # Navigation structure
+│   ├── pages/           # Page components
+│   │   ├── Home.jsx
+│   │   ├── ClusterCin.jsx
+│   │   ├── Usage.jsx
+│   │   ├── Theory/      # Theory documentation pages
+│   │   └── UserGuide/   # User guide pages
+│   ├── App.jsx          # Main application component
+│   ├── App.css          # Application styles
+│   ├── main.jsx         # Application entry point
+│   └── index.css        # Global styles
+├── index.html           # HTML template
+├── package.json         # Dependencies and scripts
+├── vite.config.js       # Vite configuration
+├── postcss.config.js    # PostCSS configuration
+├── eslint.config.js     # ESLint configuration
+└── README.md           # This file
+```
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Starts the development server with HMR |
+| `npm run build` | Creates an optimized production build |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Runs ESLint to check code quality |
+
+## 🌐 Accessing the Cluster
+
+To access the Apuana cluster, users need:
+- A **cin.ufpe.br** login account
+- Access permissions enabled for cluster machines
+- Connection to the **CIn VPN**
+
+## 🤝 Contributing
+
+This project is under active development. Contributions are welcome! Please ensure your code follows the existing style guidelines and passes all linting checks.
+
+## 📄 License
+
+This project is maintained by CIn-UFPE for the Apuana Cluster documentation.
+
+## 📧 Support
+
+For questions or support regarding the Apuana cluster, please refer to the FAQ section in the documentation or contact the CIn support team.
+
+---
+
+Built with ❤️ by the CIn-UFPE team
