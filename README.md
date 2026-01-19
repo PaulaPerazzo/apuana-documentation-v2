@@ -2,7 +2,7 @@
 
 A modern, responsive documentation website for the Apuana Cluster at CIn-UFPE (Centro de Informática da Universidade Federal de Pernambuco). This project provides comprehensive documentation for cluster users, including theory, usage guides, and best practices.
 
-## 📋 About
+## About
 
 Apuana Documentation v2 is a web-based documentation platform that helps users understand and effectively utilize the Apuana computing cluster. The documentation covers:
 
@@ -13,33 +13,24 @@ Apuana Documentation v2 is a web-based documentation platform that helps users u
 - **Dashboard**: Monitoring and management tools
 - **FAQ**: Frequently asked questions and troubleshooting
 
-## ✨ Features
+## Technologies Used
 
-- 🌓 **Dark/Light Mode**: Built-in theme switcher for user preference
-- 📱 **Responsive Design**: Mobile-friendly interface using Tailwind CSS
-- 🧭 **Easy Navigation**: Intuitive routing with React Router
-- 🎨 **Modern UI**: Clean and professional design with Lucide icons
-- 💻 **Code Highlighting**: Syntax highlighting for code examples using react-syntax-highlighter
-- ⚡ **Fast Performance**: Built with Vite for optimal loading speeds
+- **React 19.2.0**;
+- **Vite 7.2.4**;
+- **React Router DOM 7.12.0**;
+- **Tailwind CSS 4.1.18**;
+- **Lucide React**;
+- **React Syntax Highlighter**;
+- **ESLint**;
 
-## 🛠️ Technologies Used
-
-- **React 19.2.0**: Modern UI library
-- **Vite 7.2.4**: Next-generation frontend tooling
-- **React Router DOM 7.12.0**: Client-side routing
-- **Tailwind CSS 4.1.18**: Utility-first CSS framework
-- **Lucide React**: Beautiful icon library
-- **React Syntax Highlighter**: Code syntax highlighting
-- **ESLint**: Code linting and quality assurance
-
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this project, make sure you have the following installed:
 
 - **Node.js** (LTS version recommended): [Download here](https://nodejs.org/)
 - **npm** (comes with Node.js) or **yarn**
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
@@ -52,7 +43,7 @@ Before running this project, make sure you have the following installed:
    npm install
    ```
 
-## 🏃 How to Run
+## How to Run
 
 ### Development Mode
 
@@ -90,7 +81,7 @@ To run ESLint and check code quality:
 npm run lint
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 apuana-documentation-v2/
@@ -124,7 +115,7 @@ apuana-documentation-v2/
 └── README.md           # This file
 ```
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -133,25 +124,22 @@ apuana-documentation-v2/
 | `npm run preview` | Previews the production build locally |
 | `npm run lint` | Runs ESLint to check code quality |
 
-## 🌐 Accessing the Cluster
+## Accessing the Cluster
 
 To access the Apuana cluster, users need:
 - A **cin.ufpe.br** login account
 - Access permissions enabled for cluster machines
 - Connection to the **CIn VPN**
 
-## 🤝 Contributing
-
-This project is under active development. Contributions are welcome! Please ensure your code follows the existing style guidelines and passes all linting checks.
-
-## 📄 License
+## License
 
 This project is maintained by CIn-UFPE for the Apuana Cluster documentation.
 
-## 📧 Support
+## Support
 
 For questions or support regarding the Apuana cluster, please refer to the FAQ section in the documentation or contact the CIn support team.
 
----
+## Authors
 
-Built with ❤️ by the CIn-UFPE team
+- [José Vinícius Souza](https://github.com/jvss2).
+
