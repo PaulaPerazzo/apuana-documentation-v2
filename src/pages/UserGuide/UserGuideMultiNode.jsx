@@ -4,11 +4,11 @@ import CodeBlock from '../../components/ui/CodeBlock';
 const UserGuideMultiNode = () => {
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold text-gray-900 border-b pb-4">Nós Múltiplos</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 border-b pb-4">Nós Múltiplos</h1>
       
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800">Paralelismo de Dados</h2>
-        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Paralelismo de Dados</h2>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
           <img 
             src="/assets/dataparallel.png" 
             alt="Data Parallel" 
@@ -16,7 +16,7 @@ const UserGuideMultiNode = () => {
           />
         </div>
         
-        <p className="text-gray-700">Solicite 3 nós com pelo menos 4 GPUs cada um.</p>
+        <p className="text-gray-700 dark:text-gray-300">Solicite 3 nós com pelo menos 4 GPUs cada um.</p>
         
         <CodeBlock language="bash">
 {`#!/bin/bash
@@ -56,8 +56,8 @@ srun -l torchrun \\
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800">Script PyTorch Exemplo</h2>
-        <p className="text-gray-700">Esboço de um treinador multi-nó:</p>
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Script PyTorch Exemplo</h2>
+        <p className="text-gray-700 dark:text-gray-300">Esboço de um treinador multi-nó:</p>
         <CodeBlock language="python">
 {`import os
 import torch.distributed as dist
