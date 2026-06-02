@@ -61,8 +61,8 @@ const Faq = () => {
             5. Qual o mapeamento dos nós aos tipos de GPU e a VRAM disponível em cada nó?
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-2">
-            Atualmente, o cluster Apuana conta com 16 GPUs (sendo 11 NVIDIA RTX 3090 e 5 NVIDIA A100)
-            distribuídas entre 9 nós. A relação entre a distribuição de GPUs e sua memória VRAM pode ser encontrada na tabela abaixo.
+            Atualmente, o cluster Apuana conta com 18 GPUs (sendo 11 NVIDIA RTX 3090, 5 NVIDIA A100, 1 NVIDIA L40S e 1 NVIDIA RTX BLACKWELL 6000)
+            distribuídas entre 10 nós. A relação entre a distribuição de GPUs e sua memória VRAM pode ser encontrada na tabela abaixo.
           </p>
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg">
@@ -81,9 +81,10 @@ const Faq = () => {
                   { no: '4', gpus: '2 x NVIDIA RTX 3090', vram: '24576 MiB cada' },
                   { no: '5', gpus: '2 x NVIDIA RTX 3090', vram: '24576 MiB cada' },
                   { no: '6', gpus: '1 x NVIDIA A100', vram: '81920 MiB' },
-                  { no: '7', gpus: '1 x NVIDIA A100', vram: '81920 MiB' },
-                  { no: '8', gpus: '1 x NVIDIA A100', vram: '81920 MiB' },
+                  { no: '7', gpus: '2 x NVIDIA A100', vram: '81920 MiB cada' },
+                  { no: '8', gpus: '1 x NVIDIA L40S', vram: '49152 MiB' },
                   { no: '9', gpus: '2 x NVIDIA A100', vram: '81920 MiB cada' },
+                  { no: '10', gpus: '1x NVIDIA RTX PRO 6000', vram: '98304 MiB cada' },
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="py-2 px-4 border-b dark:border-gray-700 text-gray-800 dark:text-gray-300 font-medium">{row.no}</td>

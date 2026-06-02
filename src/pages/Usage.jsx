@@ -10,7 +10,7 @@ const Usage = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Acessando o Cluster</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          Para acessar o cluster é necessário ter um login <strong>cin.ufpe.br</strong> e ter o acesso habilitado 
+          Para acessar o cluster é necessário ter um login <strong>cin.ufpe.br</strong> e ter o acesso habilitado
           às máquinas de acesso do cluster. Também é necessário estar na <strong>VPN do CIn</strong>.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
@@ -24,13 +24,13 @@ const Usage = () => {
           O envio de tarefas para o cluster precisa ser feito a partir de uma máquina de acesso via SSH:
         </p>
         <CodeBlock language="bash">
-          ssh {'<login>'}@slurm-client1.cin.ufpe.br
+          ssh &lt;login&gt;@slurm-client1.cin.ufpe.br
         </CodeBlock>
         <p className="text-gray-700 dark:text-gray-300">
-          Para acessar o servidor que realizará o processamento de forma interativa, utilize o comando:
+          Para acessar o servidor que realizará o processamento de forma interativa, utilize o comando (por exemplo):
         </p>
         <CodeBlock language="bash">
-          salloc
+          salloc --mem 64G -c 48 --gpus 1
         </CodeBlock>
       </section>
 
@@ -39,21 +39,21 @@ const Usage = () => {
         <p className="text-gray-700 dark:text-gray-300">
           Recomendamos o uso de ambientes virtuais para instalar pacotes sem interferir no sistema global.
         </p>
-        
+
         <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 pt-2">Criando e Ativando Ambientes</h3>
         <p className="text-gray-700 dark:text-gray-300">Primeiro, carregue o módulo Python desejado (Ex: Python 3.10):</p>
         <CodeBlock language="bash">
           module load Python3.10
         </CodeBlock>
-        
-        <p className="text-gray-700 dark:text-gray-300">Crie o ambiente virtual (substitua <code>{'<env>'}</code> pelo nome desejado):</p>
+
+        <p className="text-gray-700 dark:text-gray-300">Crie o ambiente virtual (substitua <code>&lt;env&gt;</code> pelo nome desejado):</p>
         <CodeBlock language="bash">
-          python -m venv $HOME/{'<env>'}
+          python -m venv $HOME/&lt;env&gt;
         </CodeBlock>
 
         <p className="text-gray-700 dark:text-gray-300">Ative o ambiente:</p>
         <CodeBlock language="bash">
-          source $HOME/{'<env>'}/bin/activate
+          source $HOME/&lt;env&gt;/bin/activate
         </CodeBlock>
 
         <p className="text-gray-700 dark:text-gray-300">Agora você pode instalar pacotes via pip:</p>
@@ -68,27 +68,27 @@ const Usage = () => {
           Exemplo de script <code>.sh</code> para submissão de job (TensorFlow/PyTorch):
         </p>
         <CodeBlock language="bash">
-{`#!/bin/bash
-#SBATCH --job-name=test_job
-#SBATCH --ntasks=1
-#SBATCH --mem 16G
-#SBATCH -c 8
-#SBATCH -o job.log
-#SBATCH --output=job_output.txt
-#SBATCH --error=job_error.txt
+          {`#!/bin/bash
+            #SBATCH --job-name=test_job
+            #SBATCH --ntasks=1
+            #SBATCH --mem 16G
+            #SBATCH -c 8
+            #SBATCH -o job.log
+            #SBATCH --output=job_output.txt
+            #SBATCH --error=job_error.txt
 
-# carregar versão python
-module load Python/3.10
-# ativar ambiente
-source $HOME/env_teste/bin/activate
-# executar .py
-python $HOME/test_dir/test.py`}
+            # carregar versão python
+            module load Python/3.10
+            # ativar ambiente
+            source $HOME/env_teste/bin/activate
+            # executar .py
+            python $HOME/test_dir/test.py`}
         </CodeBlock>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Comandos Básicos de Gerenciamento</h2>
-        
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Comandos Básicos de Gerenciamento de Jobs</h2>
+
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-gray-100">Agendar job</h3>
@@ -103,15 +103,19 @@ python $HOME/test_dir/test.py`}
             <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm block mt-2 w-max text-gray-800 dark:text-gray-200">scancel job_id</code>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Verificar logs</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Verificar logs (dentro do diretório do job)</h3>
             <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm block mt-2 w-max text-gray-800 dark:text-gray-200">cat job_output.txt</code>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100">Verificar erro (dentro do diretório do job)</h3>
+            <code className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm block mt-2 w-max text-gray-800 dark:text-gray-200">cat job_error.txt</code>
           </div>
         </div>
       </section>
 
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Partições e Limites de Recursos</h2>
-        
+
         <div>
           <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-2">QoS (Qualidade de Serviço)</h3>
           <div className="overflow-x-auto">
@@ -185,17 +189,17 @@ python $HOME/test_dir/test.py`}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Sincronização de Arquivos</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          Para transferir arquivos entre sua máquina e o cluster, utilize o comando <code>rsync</code>.
+          Para transferir arquivos entre sua máquina e o cluster, utilize o comando <code>rsync</code> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-pt" className='text-blue-500 hover:underline' target='_blank' rel='noopener noreferrer'> (tutorial) </a>
         </p>
 
         <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 pt-2">Máquina Local → Cluster</h3>
         <CodeBlock language="bash">
-          rsync --bwlimit=1000 -azP pasta-1 {'<login>'}@slurm-client1.cin.ufpe.br:~
+          rsync --bwlimit=1000 -azP pasta-1 &lt;login&gt;@slurm-client1.cin.ufpe.br:~
         </CodeBlock>
 
         <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200 pt-2">Cluster → Máquina Local</h3>
         <CodeBlock language="bash">
-          rsync --bwlimit=1000 -azP {'<login>'}@slurm-client1.cin.ufpe.br:~/pasta-1 ~
+          rsync --bwlimit=1000 -azP &lt;login&gt;@slurm-client1.cin.ufpe.br:~/pasta-1 ~
         </CodeBlock>
       </section>
     </div>

@@ -8,9 +8,9 @@ const ClusterCin = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Visão geral da arquitetura e acesso</h2>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <img 
-            src="/assets/arquitetura_cluster_final.png" 
-            alt="Arquitetura Cluster Final" 
+          <img
+            src="/assets/arquitetura_cluster_final.png"
+            alt="Arquitetura Cluster Final"
             className="w-full h-auto rounded"
           />
         </div>
@@ -19,13 +19,13 @@ const ClusterCin = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Visão geral de funcionamento do cluster</h2>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 mb-6">
-          <img 
-            src="/assets/cluster_overview2.png" 
-            alt="Cluster Overview" 
+          <img
+            src="/assets/cluster_overview2.png"
+            alt="Cluster Overview"
             className="w-full h-auto rounded"
           />
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
             <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2">Login Nodes</h3>
@@ -38,7 +38,7 @@ const ClusterCin = () => {
           <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
             <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2">Management</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>slurm-manager[1-2]</li>
+              <li>slurm-manager1</li>
               <li>slurmctld</li>
               <li>slurmdbdb</li>
             </ul>
@@ -47,7 +47,7 @@ const ClusterCin = () => {
           <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
             <h3 className="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-2">Compute Nodes</h3>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>cluster-node[1-5]</li>
+              <li>cluster-node[1-10]</li>
               <li>slurmd</li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ const ClusterCin = () => {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Política de Uso</h2>
-        
+
         <div className="space-y-4">
           <div>
             <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-2">Fila de jobs</h3>

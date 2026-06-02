@@ -5,11 +5,11 @@ const UserGuidePython = () => {
   return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 border-b pb-4">Python</h1>
-      
+
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Ambientes virtuais</h2>
         <p className="text-gray-700 dark:text-gray-300">
-          Um ambiente virtual em Python é um ambiente local e isolado no qual você pode instalar ou desinstalar 
+          Um ambiente virtual em Python é um ambiente local e isolado no qual você pode instalar ou desinstalar
           pacotes do Python sem interferir no ambiente global.
         </p>
       </section>
@@ -20,13 +20,13 @@ const UserGuidePython = () => {
           Primeiro, carregue o módulo Python que você deseja usar:
         </p>
         <CodeBlock language="bash">module load python/3.8</CodeBlock>
-        
+
         <p className="text-gray-700 dark:text-gray-300">Então, crie um ambiente virtual no seu diretório <code>home</code>:</p>
-        <CodeBlock language="bash">python -m venv $HOME/{'<env>'}</CodeBlock>
-        
+        <CodeBlock language="bash">python -m venv $HOME/&lt;env&gt;</CodeBlock>
+
         <p className="text-gray-700 dark:text-gray-300">Finalmente, ative o ambiente:</p>
-        <CodeBlock language="bash">source $HOME/{'<env>'}/bin/activate</CodeBlock>
-        
+        <CodeBlock language="bash">source $HOME/&lt;env&gt;/bin/activate</CodeBlock>
+
         <p className="text-gray-700 dark:text-gray-300">Instalando pacotes:</p>
         <CodeBlock language="bash">pip install torch torchvision</CodeBlock>
       </section>
@@ -37,16 +37,16 @@ const UserGuidePython = () => {
           Você pode carregar o módulo do conda com o seguinte comando:
         </p>
         <CodeBlock language="bash">module load miniforge3/2025.07</CodeBlock>
-        
+
         <p className="text-gray-700 dark:text-gray-300">Verificar versão:</p>
         <CodeBlock language="bash">conda --version</CodeBlock>
-        
+
         <p className="text-gray-700 dark:text-gray-300">Criar novo ambiente:</p>
-        <CodeBlock language="bash">conda create --n {'<env>'} python={'<version>'} -y</CodeBlock>
-        
+        <CodeBlock language="bash">conda create --n &lt;env&gt; python=&lt;version&gt; -y</CodeBlock>
+
         <p className="text-gray-700 dark:text-gray-300">Ativar ambiente:</p>
-        <CodeBlock language="bash">conda activate {'<env>'}</CodeBlock>
-        
+        <CodeBlock language="bash">conda activate &lt;env&gt;</CodeBlock>
+
         <p className="text-gray-700 dark:text-gray-300">Desativar ambiente:</p>
         <CodeBlock language="bash">conda deactivate</CodeBlock>
       </section>
