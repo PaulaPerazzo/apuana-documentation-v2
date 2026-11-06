@@ -34,12 +34,14 @@ const UserGuidePortability = () => {
         <CodeBlock language="bash">module load python/3.7</CodeBlock>
       </section>
 
+      {/* (comentado por não haver singularity no apuana até o momento)
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Usando contêineres</h2>
         <p className="text-gray-700 dark:text-gray-300">
           Containers são uma abordagem popular para implantar aplicativos. Veja a seção <a href="/guides/singularity" className="text-blue-600 dark:text-blue-400 hover:underline">Singularity</a>.
         </p>
       </section>
+      */}
     </div>
   );
 };

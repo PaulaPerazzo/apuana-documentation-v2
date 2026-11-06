@@ -1,3 +1,6 @@
+// Este arquivo está "desativado" desde novembro de 2026, pois no momento atual, o apuana não apresenta o singularity
+
+/*
 import React from 'react';
 import CodeBlock from '../../components/ui/CodeBlock';
 import Alert from '../../components/ui/Alert';
@@ -89,3 +92,5 @@ rsync -avz $SLURM_TMPDIR/<to_save> $SCRATCH`}
 };
 
 export default UserGuideSingularity;
+
+*/

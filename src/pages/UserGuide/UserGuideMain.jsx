@@ -19,10 +19,12 @@ const UserGuideMain = () => {
           <h3 className="font-semibold text-blue-700 dark:text-blue-400">Python</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Ambientes virtuais, Conda, Pip.</p>
         </a>
+        {/* (Comentado por não haver singularity no apuana até o momento)
         <a href="/guides/singularity" className="block p-4 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
           <h3 className="font-semibold text-blue-700 dark:text-blue-400">Singularity</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Uso de contêineres no cluster.</p>
         </a>
+        */}
         <a href="/guides/multinode" className="block p-4 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
           <h3 className="font-semibold text-blue-700 dark:text-blue-400">Multi-Node</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Treinamento distribuído em vários nós.</p>

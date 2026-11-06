@@ -24,7 +24,8 @@ import TheorySoftware from './pages/Theory/TheorySoftware';
 import UserGuideMain from './pages/UserGuide/UserGuideMain';
 import UserGuideRunning from './pages/UserGuide/UserGuideRunning';
 import UserGuidePython from './pages/UserGuide/UserGuidePython';
-import UserGuideSingularity from './pages/UserGuide/UserGuideSingularity';
+//Comentado, pois até o dado momento não há Singularity no APUANA
+// import UserGuideSingularity from './pages/UserGuide/UserGuideSingularity';
 import UserGuideMultiNode from './pages/UserGuide/UserGuideMultiNode';
 import UserGuideSharing from './pages/UserGuide/UserGuideSharing';
 import UserGuidePortability from './pages/UserGuide/UserGuidePortability';
@@ -53,7 +54,7 @@ function App() {
           <Route path="/guides/main" element={<UserGuideMain />} />
           <Route path="/guides/running-code" element={<UserGuideRunning />} />
           <Route path="/guides/python" element={<UserGuidePython />} />
-          <Route path="/guides/singularity" element={<UserGuideSingularity />} />
+          {/* (comentado por não ter singularity no Apuana até o dado momento) <Route path="/guides/singularity" element={<UserGuideSingularity />} /> */}
           <Route path="/guides/multinode" element={<UserGuideMultiNode />} />
           <Route path="/guides/sharing-data" element={<UserGuideSharing />} />
           <Route path="/guides/portability" element={<UserGuidePortability />} />

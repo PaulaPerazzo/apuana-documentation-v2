@@ -104,12 +104,12 @@ export const navigationData = [
         description: 'Guia completo para desenvolvimento Python no cluster.',
         keywords: ['python', 'conda', 'virtualenv', 'pip', 'jupyter', 'datascience']
       },
-      {
+      /*{ //(comentado por não ter singularity no apuana até o momento)
         name: 'Singularity',
         path: '/guides/singularity',
         description: 'Uso de containers Singularity (Apptainer).',
         keywords: ['container', 'singularity', 'apptainer', 'docker', 'imagem']
-      },
+      },*/
       {
         name: 'Multi-GPU/Node',
         path: '/guides/multinode',

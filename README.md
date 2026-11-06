@@ -8,7 +8,7 @@ Apuana Documentation v2 is a web-based documentation platform that helps users u
 
 - **Cluster Overview**: Architecture and hardware specifications
 - **Theory**: Introduction to high-performance computing concepts, Unix/Linux basics, batch systems, and data management
-- **User Guides**: Practical guides for running jobs, using Python, Singularity containers, multi-node computing, data sharing, and portability
+   - **User Guides**: Practical guides for running jobs, using Python,<!--(apuana não apresenta singularity até o momento -nov/2026-) Singularity containers, --> multi-node computing, data sharing, and portability
 - **Services**: Available cluster services and resources
 - **Dashboard**: Monitoring and management tools
 - **FAQ**: Frequently asked questions and troubleshooting
